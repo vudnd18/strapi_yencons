@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "name": "customer",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "type": "biginteger",
+      "required": false
+    },
+    "note": {
+      "type": "richtext"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "success"
+      ],
+      "default": "new"
+    }
+  }
+}
