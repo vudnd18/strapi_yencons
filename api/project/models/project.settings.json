@@ -20,9 +20,6 @@
     "slug": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
     "status": {
       "type": "boolean",
       "default": true
@@ -56,6 +53,9 @@
     },
     "address": {
       "type": "string"
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }
