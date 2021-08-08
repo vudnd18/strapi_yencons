@@ -1,0 +1,25 @@
+version: '3'
+services:
+  strapi:
+    image: strapi/strapi
+    container_name: yencons_strapi
+    env_file: .env
+    environment:
+      DATABASE_CLIENT: mysql
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_PORT: ${DATABASE_PORT}
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      NODE_ENV: production
+      LETSENCRYPT_HOST: admin.yencons.com
+      LETSENCRYPT_EMAIL: vudnd18@gmail.com
+      VIRTUAL_HOST: admin.yencons.com
+      VIRTUAL_PORT: 1337
+    volumes:
+      - ./:/srv/app
+
+networks:
+  default:
+    external:
+      name: strapi_network
