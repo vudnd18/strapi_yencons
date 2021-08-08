@@ -34,7 +34,7 @@ module.exports = {
         sanitizeEntity(entity, { model: strapi.models.blog })
       );
     } else {
-      count = await strapi.services.blog.count();
+      count = await strapi.services.blog.count(query);
       const entities = await strapi.services.blog.find(query);
       data = entities.map((entity) =>
         sanitizeEntity(entity, { model: strapi.models.blog })
