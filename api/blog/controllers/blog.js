@@ -26,7 +26,7 @@ module.exports = {
 
     query._start = start;
     query._limit = limit;
-
+    query._sort = "created_at:DESC";
     if (ctx.query._q) {
       count = await strapi.services.blog.countSearch(query);
       const entities = await strapi.services.blog.search(query);
