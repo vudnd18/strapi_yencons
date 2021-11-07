@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "name": "Homepage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "introduce": {
+      "type": "richtext"
+    },
+    "introduce_url": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.quote"
+    },
+    "project": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.project"
+    }
+  }
+}

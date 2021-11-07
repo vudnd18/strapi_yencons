@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_homepage_projects",
+  "info": {
+    "name": "project",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}
